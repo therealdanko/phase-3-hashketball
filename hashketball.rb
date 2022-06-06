@@ -1,4 +1,5 @@
-# Write your code below game_hash
+require "pry"
+
 def game_hash
   {
     home: {
@@ -126,4 +127,15 @@ def game_hash
   }
 end
 
-# Write code here
+
+home_team = game_hash[:home][:players]
+away_team = game_hash[:away][:players]
+all_players = home_team.concat(away_team)
+
+def num_points_scored(player)
+  selected_player = all_players.select {|player| player == player_name}
+  binding.pry
+end
+
+
+
